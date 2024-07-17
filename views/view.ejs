@@ -1,0 +1,18 @@
+<link rel = "stylesheet" href = "styles/main.css" />
+
+<%- include("partials/header.ejs") %>
+    
+<div class = "divider"></div>
+
+<div id = "viewBody">
+    <h1 id = "viewH1"><%= post[0] %></h1>
+    <h2 id = "viewAuthor">Author: <%= post[1] %></h2>
+    <h3 id = "viewDate">Date posted: <%= post[3] %></h2>
+    <hr id = "viewHR" />
+    <p id = "viewParagraph"><%= post[2] %></p>
+    <img src = "images/paint2cropped.png" id = "paintIMG"/>
+</div>
+
+<div class = "divider"></div>
+
+<%- include("partials/footer.ejs") %>

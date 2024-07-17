@@ -1,0 +1,414 @@
+#hero {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    background-image: url("/images/window2.jpeg");
+}
+
+.divider {
+    height: 10px;
+    width: 100%;
+    background-color: rgb(255, 224, 86, 0.8);
+}
+
+#share-story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 520px;
+    max-width: 100%;
+}
+
+#shareH1 {
+    color: rgb(29, 75, 88);
+    background-color: white;
+    font-size: 80px;
+    padding: 10px 30px;
+}
+
+#posts {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    gap: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 75px;
+    padding-bottom: 100px;
+    background-color: rgb(173, 216, 230, 0.15);
+}
+
+#author-date {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-family: "Barlow", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.postDetails {
+    font-weight: 300;
+}
+
+.post {
+    min-height: 250px;
+    background-color: rgba(32, 178, 170, 0.15);
+    border-radius: 2%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    border: 5px double rgb(32, 178, 170, 0.5);
+}
+
+.postTitles {
+    margin-top: 8%;
+    color: rgb(29, 75, 88);
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 3%;
+    display: inline-block;
+}
+
+.postDetails {
+    color: lightseagreen;
+    margin-top: 1px;
+}
+
+#create-button {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: 4%;
+    top: 520px;
+    color:rgb(29, 75, 88);
+    background-color: rgb(255, 224, 86);
+    border: 2.5px inset rgb(2, 80, 48);
+    font-size: 14px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 420;
+}
+
+.hoverButton {
+    opacity: 1;
+}
+
+.view-button {
+    background-color: rgb(255, 224, 86);
+    border: 2px inset rgb(29, 75, 88);
+    font-family: "Barlow", sans-erif;
+    font-weight: 400;
+    margin-left: 15%;
+    margin-top: 3%;
+    display: inline-block;
+    padding: 5px;
+}
+
+#createBody {
+    background-color: rgb(173, 216, 230, 0.15);
+    margin-bottom: 0;
+}
+
+#blogPost-H1 {
+    margin-top: 0;
+    margin-left: 12%;
+    font-size: 50px;
+    color: rgb(29, 75, 88);
+}
+
+#create-hr {
+    margin-left: 12%;
+    width: 76%;
+}
+
+#title-form {
+    width: 50%;
+    height: 60px;
+    font-size : 30px;
+    margin-top: 30px;
+    margin-left: 12%;
+    border-color: lightseagreen;
+    background-color: rgba(32, 178, 170, 0.15);
+    display: inline-block;
+    font-family: "Marcellus", serif;
+}
+
+#body-form {
+    width: 76%;
+    font-size : 15px;
+    margin-top: 30px;
+    margin-left: 12%;
+    border-color: lightseagreen;
+    background-color: rgb(32, 178, 170, 0.15);
+    display: block;
+    font-family: "Barlow", sans-serif;
+}
+
+#author-form {
+    width: 25%;
+    font-size : 30px;
+    height: 60px;
+    margin-top: 30px;
+    margin-left: 1%;
+    border-color: lightseagreen;
+    background-color: rgb(32, 178, 170, 0.15);
+    display: inline-block;
+    font-family: "Marcellus", serif;
+}
+
+#checkPen {
+    margin-left: 20px;
+    color: #ffe056;
+}
+
+#submit-container {
+    margin-top: 10px;
+    text-align: right;
+}
+
+#submit-form {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+}
+
+#submit-button {
+    margin-top: 15px;
+    margin-right: 12%;
+    margin-bottom: 20px;
+    color: rgb(29, 75, 88);
+    font-size: 15px;
+    padding: 5px 10px;
+    border: 2px solid rgb(29, 75, 88);
+    background-color: rgb(255, 224, 86, 0.95);
+    font-family: "Barlow", sans-serif;
+}
+
+.navbar {
+    height: 100px;
+    background-color:  rgb(2, 80, 48);
+    overflow: hidden;
+    display: flex;
+    font-family: "Marcellus", serif;
+}
+
+#blogIMG {
+    height: 60px;
+    width: 80px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 10px;
+}
+
+#navLinks {
+    display: flex;
+    justify-content: right;
+    gap: 5%;
+    width: 100%;
+    margin-right: 5%;
+}
+
+.navbar p {
+    margin-top: 40px;
+    font-size: 18px;
+    color: white;
+}
+
+.deleteContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 160px;
+    right: 5%;
+}
+
+.delete-button {
+    height: 20px;
+    margin-top: 40px;
+    font-family: "Barlow", sans-serif;
+    padding-bottom: 18px;
+}
+
+.delete {
+    color: rgb(128, 128, 128, 0.7);
+    height: 30px;
+    width: 20px;
+}
+
+#create {
+    font-family: "Dancing Script", cursive;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: block;
+}
+
+#viewBody {
+    background-color: rgb(173, 216, 230, 0.15);
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100%;
+    z-index: 1;
+}
+
+#viewH1 {
+    margin-left: 12%;
+    font-size: 50px;
+    color: rgb(29, 75, 88);
+    margin-bottom: 10px;
+    padding-top: 30px;
+}
+
+#viewHR {
+    margin-left: 12%;
+    width: 50%;
+    margin-top: 20px;
+}
+
+#viewAuthor {
+    margin-left: 12%;
+    font-size: 20px;
+    color: lightseagreen;
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#viewDate{
+    margin-left: 12%;
+    font-size: 15px;
+    color: lightseagreen;
+    font-family: "Barlow", serif;
+    font-weight: 500;
+}
+
+#viewParagraph {
+    margin-left: 12%;
+    width: 50%;
+    text-align: left;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    padding-bottom: 50px;
+    min-height: 100%;
+    font-family: "Barlow", sans-serif;
+}
+
+#paintIMG {
+    position: absolute;
+    left: 60%;
+    top: 0;
+    height: 130vh;
+    width: 60%;
+    z-index: -1;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100%;
+}
+
+#content-wrap {
+    padding-bottom: 100px; 
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(2, 80, 48);
+    display: grid;
+    grid-template-columns: 18fr 1.4fr 1fr 1fr 1fr;
+    font-family: "Marcellus", serif;
+}
+
+#copyright {
+    margin-left: 5%;
+    padding-top: 25px;
+    font-size: 18px;
+    color: white;
+}
+
+#footer-contact {
+    font-size: 18px;
+    padding-top: 25px;
+    color: white;
+}
+
+svg {
+    margin-left: 20px;
+    padding-top: 38px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Courier Prime", serif;
+    font-weight: 400;
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2%;
+    gap: 5%;
+}
+#brand-name {    
+    color: white;
+    letter-spacing: 1px;
+    font-size: 40px;
+    font-family: "Dancing script", cursive;
+}
+
+@media (max-width : 800px) {
+    #posts {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 10%;
+        padding-right: 10%;
+        width: 80%;
+    }
+
+}
+
+@media(max-width : 1000px) {
+    #share-story {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    #blogPost-H1 {
+        padding-top: 50px;
+    }
+
+}
+
+@media(max-width : 600px) {
+    #create-button {
+        top: 540px;
+    }
+}
