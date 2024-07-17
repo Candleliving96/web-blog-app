@@ -1,7 +1,7 @@
 #hero {
     display: flex;
     flex-direction: column;
-    height: 550px;
+    height: 535px;
     background-image: url("/images/window2.jpeg");
 }
 
@@ -88,9 +88,10 @@
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
+    z-index: 2;
     right: 4%;
-    top: 520px;
+    bottom: 60px;
     color:rgb(29, 75, 88);
     background-color: rgb(255, 224, 86);
     border: 2.5px inset rgb(2, 80, 48);
