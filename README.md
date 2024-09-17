@@ -26,6 +26,7 @@ CREATE TABLE posts (
   date_created VARCHAR(10),
   <br />
   post_body text
+  <br />
 ); 
 
 To run:
