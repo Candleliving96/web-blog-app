@@ -5,11 +5,12 @@
 <div class = "divider"></div>
 
 <div id = "viewBody">
-    <h1 id = "viewH1"><%= post[0] %></h1>
-    <h2 id = "viewAuthor">Author: <%= post[1] %></h2>
-    <h3 id = "viewDate">Date posted: <%= post[3] %></h2>
+    <h1 id = "viewH1"><%= post.title %></h1>
+    <h2 id = "viewAuthor">Author: <%= post.author %></h2>
+    <h3 id = "viewDate">Date posted: <%= post.date_created %></h2>
     <hr id = "viewHR" />
-    <p id = "viewParagraph"><%= post[2] %></p>
+    <p id = "viewParagraph"><%= post.post_body %></p>
+    <% console.log("body is " + post.post_body) %>
     <img src = "images/paint2cropped.png" id = "paintIMG"/>
 </div>
 

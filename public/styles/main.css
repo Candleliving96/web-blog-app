@@ -33,9 +33,14 @@
     gap: 3%;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 75px;
+    padding-top: 100px;
     padding-bottom: 100px;
     background-color: rgb(173, 216, 230, 0.15);
+}
+
+#no-posts {
+    width: 100vw;
+    margin-bottom: 0;
 }
 
 #author-date {
@@ -58,6 +63,7 @@
     background-color: rgba(32, 178, 170, 0.15);
     border-radius: 2%;
     margin-top: 15px;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,7 +74,6 @@
 }
 
 .postTitles {
-    margin-top: 8%;
     color: rgb(29, 75, 88);
     font-family: "Marcellus", serif;
     font-weight: 400;
@@ -91,7 +96,7 @@
     position: fixed;
     z-index: 2;
     right: 4%;
-    bottom: 62px;
+    bottom: 10vh;
     color:rgb(29, 75, 88);
     background-color: rgb(255, 224, 86);
     border: 2.5px inset rgb(2, 80, 48);
@@ -104,9 +109,9 @@
     opacity: 1;
 }
 
-.view-button {
+.hi {
     background-color: rgb(255, 224, 86);
-    border: 2px inset rgb(29, 75, 88);
+    border: 2px inset rgb(27, 50, 56);
     font-family: "Barlow", sans-erif;
     font-weight: 400;
     margin-left: 15%;
@@ -132,7 +137,7 @@
     width: 76%;
 }
 
-#title-form {
+.title-form {
     width: 50%;
     height: 60px;
     font-size : 30px;
@@ -144,7 +149,7 @@
     font-family: "Marcellus", serif;
 }
 
-#body-form {
+.body-form {
     width: 76%;
     font-size : 15px;
     margin-top: 30px;
@@ -155,7 +160,7 @@
     font-family: "Barlow", sans-serif;
 }
 
-#author-form {
+.author-form {
     width: 25%;
     font-size : 30px;
     height: 60px;
@@ -172,7 +177,7 @@
     color: #ffe056;
 }
 
-#submit-container {
+.submit-container {
     margin-top: 10px;
     text-align: right;
 }
@@ -182,7 +187,7 @@
     padding-bottom: 15px;
 }
 
-#submit-button {
+.submit-button {
     margin-top: 15px;
     margin-right: 12%;
     margin-bottom: 20px;
@@ -213,13 +218,15 @@
 #navLinks {
     display: flex;
     justify-content: right;
+    align-items: center;
     gap: 5%;
     width: 100%;
     margin-right: 5%;
+    margin-left: 2%;
+    font-size: 25px;
 }
 
 .navbar p {
-    margin-top: 40px;
     font-size: 18px;
     color: white;
 }
@@ -233,17 +240,43 @@
     right: 5%;
 }
 
-.delete-button {
+.delete-button, .edit-button, .view-button {
     height: 20px;
     margin-top: 40px;
     font-family: "Barlow", sans-serif;
     padding-bottom: 18px;
+    position: absolute;
+    top: 50%;
+    width: 18%;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5%;
 }
 
-.delete {
+.delete-button {
+    left: 65%;
+    background-color: rgb(255, 0, 0, 0.7);
+}
+
+.edit-button {
+    left: 40%;
+    background-color: rgb(0, 128, 0, 0.7);
+}
+
+.view-button {
+    left: 15%;
+    background-color: rgb(255, 224, 86, 0.8);
+}
+
+form {
+    width: 100%;
+}
+
+.trash-icon {
     color: rgb(128, 128, 128, 0.7);
-    height: 30px;
-    width: 20px;
+    height: 25px;
+    width: 15px;
+    display: inline-block;
 }
 
 #create {
@@ -286,7 +319,7 @@
     font-weight: 500;
 }
 
-#viewDate{
+#viewDate {
     margin-left: 12%;
     font-size: 15px;
     color: lightseagreen;
@@ -331,25 +364,23 @@
     background-color: rgb(2, 80, 48);
     display: grid;
     grid-template-columns: 18fr 1.4fr 1fr 1fr 1fr;
+    align-items: center;
     font-family: "Marcellus", serif;
 }
 
 #copyright {
     margin-left: 5%;
-    padding-top: 25px;
     font-size: 18px;
     color: white;
 }
 
 #footer-contact {
     font-size: 18px;
-    padding-top: 25px;
     color: white;
 }
 
 svg {
     margin-left: 20px;
-    padding-top: 38px;
     color: white;
 }
 
@@ -375,11 +406,16 @@ h1 {
     margin-left: 2%;
     gap: 5%;
 }
+
 #brand-name {    
     color: white;
     letter-spacing: 1px;
     font-size: 40px;
     font-family: "Dancing script", cursive;
+}
+
+.editForms {
+    color: gray;
 }
 
 @media (max-width : 800px) {
@@ -394,6 +430,10 @@ h1 {
         width: 80%;
     }
 
+    #blogIMG {
+        height: 40px;
+        width: 60px;
+    }
 }
 
 @media(max-width : 1000px) {
@@ -411,5 +451,25 @@ h1 {
 @media(max-width : 600px) {
     #create-button {
         top: 540px;
+    }
+    .nav-link {
+        font-size: 3vw !important;
+    }
+    #brand-name {
+        font-size: 5vw !important;
+    }
+    #copyright, #footer-contact {
+        font-size: 4vw;
+    }
+    #blogIMG {
+        height: 6vw;
+        width: 7vw;
+        margin-top: 20px;
+        position: relative;
+        bottom: 10px;
+    }
+    svg {
+        height: 5vw;
+        width: 5vw;
     }
 }

@@ -11,29 +11,34 @@
 <div class = "divider lighter"></div>
 
 <section id = "posts">
-    <% for (var i = 0; i < Object.keys(arrayOfPosts).length; i++) { %>
+    <% if (numPosts == 0) { %>
+        <div></div>
+        <h1 id="no-posts">No posts currently available. Create a post to begin viewing.</h1>
+        <div></div>
+    <% } else { 
+        for (var i = 0; i < posts.length; i++) { %>
         <div class = "post">
             <form action = "/view" method = "POST">
-                <h2 class = "postTitles"> <%= arrayOfPosts[i][0] %></h2>
+                <h2 class = "postTitles"> <%= posts[i].title %></h2>
                 <div id = "author-date">
-                    <h3 class = "postDetails">Author: <%= arrayOfPosts[i][1] %></h3>
-                    <h3 class = "postDetails">Date: <%= arrayOfPosts[i][3] %></h3>
+                    <h3 class = "postDetails">Author: <%= posts[i].author %></h3>
+                    <h3 class = "postDetails">Date: <%= posts[i].date_created %></h3>
                 </div>
-                <input type="number" name= "buttonIndex" value="<%= i %>" hidden>
-                <input type = "submit" class = "view-button" value = "View post">
+                <input type="number" name= "PostId" value="<%= posts[i].id %>" hidden>
+                <input type = "submit" class = "view-button" value = "View">
+            </form>
+            <form action="/edit" method="POST">
+                <input type="number" name="PostId" value="<%= posts[i].id %>" hidden>
+                <input type="submit" class="edit-button" value="Edit">
             </form>
 
             <form action = "/delete" method = "POST">
-                <input type="number" name= "buttonIndex" value="<%= i %>" hidden>
-                <label class = "deleteContainer">
-                    <input type="submit" class = "delete-button" value = "Delete Post"/>
-                    <svg class = "delete" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                        <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
-                    </svg>
-                </label>
+                <input type="number" name= "PostId" value="<%= posts[i].id %>" hidden>
+                    <input type="submit" class = "delete-button" value = "Delete"/>
             </form>
         </div>
-    <% } %>
+    <% } 
+    } %>
 </section>
 
 <div class = "divider"></div>
