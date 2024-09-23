@@ -105,6 +105,10 @@
     font-weight: 420;
 }
 
+.grow-button:hover {
+    transform: scale(1.1);
+}
+
 .hoverButton {
     opacity: 1;
 }

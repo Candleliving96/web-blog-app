@@ -2,7 +2,9 @@
 
 <%- include("partials/header.ejs") %>
 
-<a href = "/create"><button type = "button" id = "create-button"><span id = "create">Create</span> Post</button></a>
+<a href = "/create"><button type = "button" id = "create-button" class = "grow-button">
+    <span id = "create">Create</span> Post</button>
+</a>
 
 <div class = "divider"></div>
 <section id = "hero">
@@ -25,16 +27,16 @@
                     <h3 class = "postDetails">Date: <%= posts[i].date_created %></h3>
                 </div>
                 <input type="number" name= "PostId" value="<%= posts[i].id %>" hidden>
-                <input type = "submit" class = "view-button" value = "View">
+                <input type = "submit" class = "view-button grow-button" value = "View">
             </form>
             <form action="/edit" method="POST">
                 <input type="number" name="PostId" value="<%= posts[i].id %>" hidden>
-                <input type="submit" class="edit-button" value="Edit">
+                <input type="submit" class="edit-button grow-button" value="Edit">
             </form>
 
             <form action = "/delete" method = "POST">
                 <input type="number" name= "PostId" value="<%= posts[i].id %>" hidden>
-                    <input type="submit" class = "delete-button" value = "Delete"/>
+                    <input type="submit" class = "delete-button grow-button" value = "Delete"/>
             </form>
         </div>
     <% } 
